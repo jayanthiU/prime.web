@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function isprime() {
+            var number = parseInt(document.getElementsByName("textbox1")[0].value);
+            var count = 0;
+
+            for (var i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    count++;
+                }
+            }
+
+            if (count == 2) {
+                document.getElementById("number").innerHTML="It is a prime number";
+            } else {
+                document.getElementById("number").innerHTML="It is not a prime number";
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter a number:
+    <input type="text" name="textbox1"/>
+    <input type="button" value="Click here!!" onclick="isprime()"/>
+    <p id="number"></p>
+</body>
+</html>

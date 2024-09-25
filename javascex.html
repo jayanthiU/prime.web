@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+function sortdescending()
+{
+    let input=document.getElementById("numlist").value;
+    let numbers=input.split(',').map(Number);
+    let sortednumbers=numbers.sort((a,b) => b-a);
+    document.getElementById("result").innerText=sortednumbers.join(',');
+}
+        </script>
+    </head>
+<body>
+    enter the numbers seperated by commas<br><br>
+<input type="text" id="numlist">
+<button type="button" onclick="sortdescending()">sort</button> 
+<br>
+sorted numbers are 
+<p id="result"></p>
+</body>
+</html>
